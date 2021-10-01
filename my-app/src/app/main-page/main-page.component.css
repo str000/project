@@ -65,7 +65,10 @@
 }
 
 .progress-bar-container {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,0);
+  display: flex;
+  border-radius: 5px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
 }
