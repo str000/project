@@ -67,6 +67,7 @@
 .upper-section-container {
   border-radius: 5px;
   margin: 20px;
+  height: 220px;
   display: flex;
   position: relative;
   align-items: center;
@@ -78,11 +79,18 @@
   left: 50%;
   transform: translate(-50%,0);
   position: absolute;
-  bottom: calc(100% - 20px);
+  bottom: calc(100% - 50px);
+  font-size: 27px;
+  font-weight: bold;
+  width: 100%;
+  color: #008005;
+  text-align: center;
 }
 
 .progress-bar-container {
   margin-top: 20px;
+  top: 50%;
+  transform: translate(0,10%);
 }
 
 .circular-landscape {
@@ -91,7 +99,7 @@
   overflow: hidden;
   position: absolute;
   left: 50%;
-  top: 54%;
+  top: 49%;
   transform: translate(-50%,-50%);
   border-radius: 50%;
 }
