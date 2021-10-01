@@ -1,0 +1,50 @@
+/* Główny pojemnik */
+.upper-section-container {
+  border-radius: 5px;
+  margin: 20px;
+  height: 220px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+/* Powitanie */
+.hello-words {
+  left: 50%;
+  transform: translate(-50%,0);
+  position: absolute;
+  bottom: calc(100% - 50px);
+  font-size: 27px;
+  font-weight: bold;
+  width: 100%;
+  color: #008005;
+  text-align: center;
+}
+
+/* Pasek postępu */
+.progress-bar-container {
+  margin-top: 20px;
+  top: 50%;
+  transform: translate(0,10%);
+}
+
+/* --- Zaokrąlenie i ustawienie zdjęcia --- */
+.circular-landscape {
+  width: 120px; height: 120px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%; top: 49%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+
+.circular-landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px; /* Ustawienie */
+}
+
+/* ---------------------------------------- */
+
