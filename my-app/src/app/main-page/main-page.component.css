@@ -29,3 +29,7 @@
     width: 30px;
     color: rgba(0,0,0,0.5);
 }
+
+.selected .icons-m{
+    color: rgb(0, 128, 5);
+}
