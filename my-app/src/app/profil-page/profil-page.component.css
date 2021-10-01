@@ -1,3 +1,5 @@
+/* --- POSTĘP --- */
+
 /* Główny pojemnik */
 .upper-section-container {
   border-radius: 5px;
@@ -45,6 +47,87 @@
   height: 100%;
   margin-left: -50px; /* Ustawienie */
 }
+/* --- POSTĘP --- */
 
-/* ---------------------------------------- */
+.lower-section-container {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+  margin: 20px;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+}
 
+.left-lower-section-container, .right-lower-section-container{
+  height: 150px;
+  border-radius: 5px;
+  position: relative;
+  flex: 1;
+  padding: 5px;
+}
+
+/* --- SMOG --- */
+.left-lower-section-container {
+  background-color: #F4DC00;
+  margin-right: 10px;
+}
+
+.smog-header {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+  font-weight: bold;
+}
+
+.smog-icon {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  padding: 2px;
+  background-color: #C4C4C4;
+}
+
+.smog-icon > .icons-m {
+  color: #2958FF;
+}
+
+.smog-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+
+}
+
+.sub {vertical-align: sub;}
+
+.smog-footer {
+  bottom: 0;
+  color: white;
+  font-weight: bold;
+  overflow:auto;
+  position: absolute;
+  padding-right: 5px;
+  padding-bottom: 5px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+/* --- SMOG --- */
+
+/* --- KALENDARZ --- */
+.right-lower-section-container {
+  background-color: white;
+  margin-left: 10px;
+}
+/* --- KALENDARZ --- */
