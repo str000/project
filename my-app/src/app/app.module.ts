@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { DemoMaterialModule } from './material-module';
 import { ProfilPageComponent } from './profil-page/profil-page.component';
@@ -24,7 +25,8 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
