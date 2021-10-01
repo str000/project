@@ -1,8 +1,35 @@
-.page-container {
+.top-menu {
     position: absolute;
     width: 100%;
-    height: calc(100% - 50px);
-    background: grey;
+    height: 25px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    left: 15px;
+    font-size: 16px;
+    font-family: Nunito;
+    font-weight: 800;
+    color: rgba(0, 0, 0, .35);
+    margin: 2px;
+    line-height: 22px;
+}
+
+.profle-icon {
+    position: absolute;
+    left: calc(100% - 40px);
+    color: rgba(0, 0, 0, .35);
+}
+
+.page-container {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    height: calc(100% - 75px);
+    background: #C4C4C4;
 }
 
 .menu {
@@ -12,6 +39,8 @@
     top: calc(100% - 50px);
     background: #fff;
     display: flex;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    z-index: 1;
 }
 
 .icons {
@@ -22,14 +51,15 @@
 
 .icons-m {
     position: relative;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 30px;
     height: 30px;
     width: 30px;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, .5);
 }
 
-.selected .icons-m{
-    color: rgb(0, 128, 5);
+.selected .icons-m {
+    color: #008005;
 }
