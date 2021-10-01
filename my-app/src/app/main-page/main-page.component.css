@@ -72,3 +72,17 @@
   justify-content: center;
   background-color: white;
 }
+
+.circular-landscape {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular-landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}

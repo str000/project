@@ -28,9 +28,9 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
     DemoMaterialModule,
      // Specify ng-circle-progress as an import
      NgCircleProgressModule.forRoot({
-      "radius": 50,
+      "radius": 30,
       "space": -10,
-      "outerStrokeGradient": true,
+      "outerStrokeGradient": false,
       "outerStrokeWidth": 10,
       "outerStrokeColor": "#4882c2",
       "outerStrokeGradientStopColor": "#53a9ff",
