@@ -64,20 +64,35 @@
     color: #008005;
 }
 
-.progress-bar-container {
-  display: flex;
+.upper-section-container {
   border-radius: 5px;
   margin: 20px;
+  display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   background-color: white;
 }
 
-.circular-landscape {
+.hello-words {
+  left: 50%;
+  transform: translate(-50%,0);
   position: absolute;
-  width: 100px;
-  height: 100px;
+  bottom: calc(100% - 20px);
+}
+
+.progress-bar-container {
+  margin-top: 20px;
+}
+
+.circular-landscape {
+  width: 120px;
+  height: 120px;
   overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%,-50%);
   border-radius: 50%;
 }
 
