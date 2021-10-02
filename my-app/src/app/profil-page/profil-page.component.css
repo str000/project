@@ -67,28 +67,33 @@
   padding: 5px;
 }
 
-/* --- SMOG --- */
-.left-lower-section-container {
-  background-color: #F4DC00;
-  margin-right: 10px;
-}
-
-.smog-header {
-  display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: stretch;
-  font-weight: bold;
-}
-
-.smog-icon {
+.smog-icon, .calendar-icon {
   border-radius: 50%;
   height: 25px;
   width: 25px;
   padding: 2px;
   background-color: #C4C4C4;
+}
+
+.smog-header, .calendar-header {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+  font-weight: bold;
+}
+
+.calendar-title, .smog-title {
+  flex-grow: 2;
+  text-align: center;
+}
+
+/* --- SMOG --- */
+.left-lower-section-container {
+  background-color: #F4DC00;
+  margin-right: 10px;
 }
 
 .smog-icon > .icons-m {
@@ -102,10 +107,32 @@
   justify-content: center;
   align-items: center;
   align-content: stretch;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.smog-content-value {
+  font-size: 35px;
+  padding-top: 5px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
 
 }
 
-.sub {vertical-align: sub;}
+.smog-content-text-value {
+  font-size: 13px;
+}
+
+.sub {
+  vertical-align: sub;
+  font-size: 10px;
+}
 
 .smog-footer {
   bottom: 0;
@@ -113,15 +140,16 @@
   font-weight: bold;
   overflow:auto;
   position: absolute;
+  width: calc(100% - 10px);
   padding-right: 5px;
   padding-bottom: 5px;
 
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: stretch;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
 }
 /* --- SMOG --- */
 
@@ -129,5 +157,9 @@
 .right-lower-section-container {
   background-color: white;
   margin-left: 10px;
+}
+
+.calendar-icon > .icons-m {
+  color:#008005
 }
 /* --- KALENDARZ --- */
