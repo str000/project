@@ -54,7 +54,7 @@
     <div class="smog-content-text-value">Przeciętna jakość powietrza</div>
   </div>
   <div class="smog-footer">
-    <div class="smog-location">Katowice, Szopienice</div> <div class="smog-time">12:30</div>
+    <div class="smog-location" *ngFor="let city of cityValue">{{city.name}}</div> <div class="smog-time">12:30</div>
   </div>
 </div>
 <!-- --- SMOG --- -->
