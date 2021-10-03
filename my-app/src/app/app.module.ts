@@ -12,6 +12,12 @@ import { ProfilPageComponent } from './profil-page/profil-page.component';
 import { WorldPageComponent } from './world-page/world-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
+
+import { initializeApp } from "firebase/app";
+import * as firebase from 'firebase/app';
+
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,4 +37,8 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){         
+    firebase.initializeApp(environment.firebase);
+  }
+ }
