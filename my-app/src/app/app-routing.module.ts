@@ -7,6 +7,7 @@ import { MapPageComponent } from './map-page/map-page.component';
 import { ProfilPageComponent } from './profil-page/profil-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
 import { WorldPageComponent } from './world-page/world-page.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent, children: [
@@ -19,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes),CommonModule],
+  exports: [RouterModule,CommonModule]
 })
 export class AppRoutingModule { }

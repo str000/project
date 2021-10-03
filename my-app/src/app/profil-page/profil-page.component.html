@@ -49,12 +49,22 @@
     <div class="smog-icon"><mat-icon class="icons-m">cloud</mat-icon></div>
     <div class="smog-title">Poziom Smogu</div>
   </div>
-  <div class="smog-content">
-    <div class="smog-content-value" *ngFor="let air of cityValue">{{air.data.iaqi.o3.v}}<span class="sub" *ngFor="let airIndex of cityValue">{{air.data.dominentpol}}</span></div>
+  <div class="smog-content" *ngFor="let airData of cityValue" [ngSwitch]="airData.data.dominentpol">
+    <div class="smog-content-value" *ngFor="let air of cityValue">
+      <div class="smog-content-value-o3" *NgSwitchCase="o3">{{air.data.iaqi.o3.v}}</div>
+
+      <span class="sub" *ngFor="let airIndex of cityValue">
+      {{airIndex.data.dominentpol}}
+      </span></div>
     <div class="smog-content-text-value">Przeciętna jakość powietrza</div>
   </div>
   <div class="smog-footer">
-    <div class="smog-location" *ngFor="let city of cityValue">{{city.data.city.name}}</div> <div class="smog-time">12:30</div>
+    <div class="smog-location" *ngFor="let city of cityValue">
+      {{city.data.city.name}}
+    </div>
+    <div class="smog-time" *ngFor="let city of cityValue">
+      {{city.data.time.s}}
+    </div>
   </div>
 </div>
 <!-- --- SMOG --- -->

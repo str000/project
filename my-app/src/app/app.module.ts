@@ -12,6 +12,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { WorldPageComponent } from './world-page/world-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
+import { CommonModule } from '@angular/common';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     DemoMaterialModule,
     HttpClientModule,
+    CommonModule,
      // Specify ng-circle-progress as an import
      NgCircleProgressModule.forRoot({
       "radius": 30,
