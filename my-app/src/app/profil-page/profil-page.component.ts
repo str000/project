@@ -8,13 +8,13 @@ import { ApiService } from '../api.service';
 })
 export class ProfilPageComponent implements OnInit {
 
-  cityValue: any;
+  cityValue: any = [ ];
 
   constructor(private apiService: ApiService) { }
   ngOnInit() {
     this.apiService.getCity().subscribe((data)=>{
-      console.log(data);
-      this.cityValue = data;
+      this.cityValue.push(data);
+      console.log(this.cityValue);
     });
   }
 
