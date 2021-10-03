@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-profil-page',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilPageComponent implements OnInit {
 
-  constructor() { }
+  cityValue: any;
 
-  ngOnInit(): void {
+  constructor(private apiService: ApiService) { }
+  ngOnInit() {
+    this.apiService.getCity().subscribe((data)=>{
+      console.log(data);
+      this.cityValue = data;
+    });
   }
 
 }
