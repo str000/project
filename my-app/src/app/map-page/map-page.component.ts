@@ -24,6 +24,9 @@ export class MapPageComponent implements OnInit {
   aclymax: any;
   aclzmax: any;
 
+  speedV: any;
+  alpha: any;
+
   ngOnInit() {
 
     if("geolocation" in navigator) {
@@ -39,7 +42,11 @@ export class MapPageComponent implements OnInit {
 
       navigator.geolocation.watchPosition((position) => {
         this.showTrackingPosition(position);
-      }, null, {enableHighAccuracy: true, timeout: 5000, maximumAge: 0});
+      }, null, {
+        enableHighAccuracy: true,
+        timeout: 1000,
+        maximumAge: 0
+      });
       
     } else {
       //nie zezwolono na lokalizowanie
@@ -48,6 +55,10 @@ export class MapPageComponent implements OnInit {
     
     //Accelerometer aby sprawdzać czym sie porusza
   
+    window.addEventListener("deviceorientation", (e) => {
+      this.alpha = Math.abs(e.alpha! - 360);
+      this.mapa.rotateTo(this.alpha, {duration: 1})
+    }, true);
 
 
     if(window.DeviceMotionEvent){
@@ -71,14 +82,15 @@ export class MapPageComponent implements OnInit {
         this.aclzmax = this.aclz;
       }
     }*/
-
    
   }
+
 
 
   showTrackingPosition(position: GeolocationPosition) {
       let lat = position.coords.latitude;
       let long = position.coords.longitude;
+      var speed = position.coords.speed;
       
       if(!this.marker1) {
         const el = document.createElement('div');
@@ -87,8 +99,16 @@ export class MapPageComponent implements OnInit {
         this.marker1 = new Mapboxgl.Marker(el)
           .setLngLat([position.coords.longitude, position.coords.latitude])
           .addTo(this.mapa);
+        this.mapa.setCenter([long, lat]);
       } else {
         this.marker1.setLngLat([long, lat]);
+        this.mapa.setCenter([long, lat]);
+      }
+      
+      if (speed === null || speed === 0) {
+        this.speedV = "0 Km/h";
+      } else {
+        this.speedV = (speed * 3.6).toFixed(0) + "Km/h";
       }
   }
 
