@@ -278,3 +278,11 @@
   text-align: center;
 }
 /* --- PORADY ---*/
+
+.is-green {
+  background-color: green;
+}
+
+.is-red {
+  background-color: red;
+}

@@ -44,20 +44,24 @@
 <div class="lower-section-container">
 
 <!-- --- SMOG --- -->
-<div class="left-lower-section-container">
+<div class="left-lower-section-container" [ngClass]="setColor ? 'is-green' : 'is-red'">
   <div class="smog-header">
     <div class="smog-icon"><mat-icon class="icons-m">cloud</mat-icon></div>
     <div class="smog-title">Poziom Smogu</div>
   </div>
-  <div class="smog-content" *ngFor="let airData of cityValue" >
-    <div class="smog-content-value" *ngFor="let air of cityValue" [ngSwitch]="airData.data.dominentpol">
-      <span class="smog-content-value-o3" *ngFor="let air of cityValue" NgSwitchCase="o3">{{air.data.iaqi.o3.v}}</span>
+  <div class="smog-content" >
+    <div class="smog-content-value">
+      <span class="smog-content-value-o3" *ngFor="let air of cityValue">
+        {{air.data.iaqi.o3.v}}
+      </span>
       <span class="sub" *ngFor="let airIndex of cityValue">
-      {{airIndex.data.dominentpol}}
+        {{airIndex.data.dominentpol}}
       </span>
 
     </div>
-    <div class="smog-content-text-value">Przeciętna jakość powietrza</div>
+    <div class="smog-content-text-value" *ngFor="let action of cityValue">
+      <span></span>
+    </div>
   </div>
   <div class="smog-footer">
     <div class="smog-location" *ngFor="let city of cityValue">
