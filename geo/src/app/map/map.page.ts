@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import * as Mapboxgl from 'mapbox-gl';
 import { environment } from 'src/environments/environment';
 
+
 @Component({
-  selector: 'app-map-page',
-  templateUrl: './map-page.component.html',
-  styleUrls: ['./map-page.component.css']
+  selector: 'app-map',
+  templateUrl: './map.page.html',
+  styleUrls: ['./map.page.scss'],
 })
-export class MapPageComponent implements OnInit {
+export class MapPage {
 
   mapa: Mapboxgl.Map;
   lat: any;
@@ -26,7 +27,8 @@ export class MapPageComponent implements OnInit {
   speedV: any;
   alpha: any;
 
-  ngOnInit() {
+
+  ionViewDidEnter() {
 
     if("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(position => {
