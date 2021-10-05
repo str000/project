@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: black
+}
+
 /* --- POSTĘP --- */
 
 /* Główny pojemnik */
@@ -70,12 +75,15 @@
 
 .smog-icon, .calendar-icon{
   border-radius: 50%;
-  height: 25px;
-  width: 25px;
+  height: 23px;
+  width: 23px;
   padding: 2px;
-  background-color: #C4C4C4;
+  background-color: rgba(0,0,0, .20);;
 }
 
+.smog-icon .icons-m, .calendar-icon, .icons-m{
+  font-size: 23px;
+}
 
 .smog-header, .calendar-header {
   display: flex;
@@ -115,8 +123,8 @@
 }
 
 .smog-content-value {
-  font-size: 35px;
-  padding-top: 5px;
+  font-size: 40px;
+  padding-top: 10px;
 
   display: flex;
   flex-direction: row;
@@ -128,14 +136,15 @@
 }
 
 .smog-content-text-value {
-  font-size: 13px;
+  font-size: 15px;
   height: 40px;
+  padding: 10px;
   overflow: hidden;
 }
 
 .sub {
   vertical-align: sub;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .smog-footer {
