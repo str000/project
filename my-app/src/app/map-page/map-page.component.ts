@@ -51,7 +51,7 @@ export class MapPageComponent implements OnInit {
 
     
     //Accelerometer aby sprawdzać czym sie porusza
-    if(window.DeviceOrientationEvent){
+    /*if(window.DeviceOrientationEvent){
       window.addEventListener("deviceorientation", (e) => {
         this.alpha = Math.abs(e.alpha! - 360);
         this.mapa.rotateTo(this.alpha, {duration: 1})
@@ -69,7 +69,7 @@ export class MapPageComponent implements OnInit {
     }else{
       console.log("DeviceMotionEvent is not supported");
     }
-
+*/
    
   }
 
@@ -99,10 +99,10 @@ export class MapPageComponent implements OnInit {
         this.speedV = (speed * 3.6).toFixed(0);
       }
 
-      if (this.speedV > 0) {
+      if (this.speedV > 0 && this.speedV < 7) {
         this.liveActivity = "directions_walk"
       }
-      else if (this.speedV > 7) {
+      else if (this.speedV >= 7 && this.speedV <=30) {
         this.liveActivity = "directions_run"
       } 
       else if (this.speedV > 30) {
