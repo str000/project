@@ -12,9 +12,11 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { WorldPageComponent } from './world-page/world-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
+import { SmogDialog } from './profil-page/profil-page.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     WorldPageComponent,
     MapPageComponent,
     SettingsPageComponent,
+    SmogDialog,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     DemoMaterialModule,
     HttpClientModule,
     CommonModule,
+    MatDialogModule,
      // Specify ng-circle-progress as an import
      NgCircleProgressModule.forRoot({
       "radius": 30,
@@ -53,6 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
   //...
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SmogDialog],
 })
 export class AppModule { }

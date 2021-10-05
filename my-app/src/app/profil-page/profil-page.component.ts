@@ -1,6 +1,8 @@
 import { formatDate } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../api.service';
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+
 @Component({
   selector: 'app-profil-page',
   templateUrl: './profil-page.component.html',
@@ -9,15 +11,11 @@ import { ApiService } from '../api.service';
 export class ProfilPageComponent implements OnInit {
 
   cityValue: any = [ ];
-
   setColor: any;
   setNameQuality: any;
-
   dominent: any;
   dominentValue: any;
-
   nameCity: any;
-
   localTime: any;
 
   constructor(private apiService: ApiService) { }
@@ -67,13 +65,26 @@ export class ProfilPageComponent implements OnInit {
       else this.setColor = "error"
 
     });
-
-
-
-
-
-
-
   }
-
 }
+
+export class AppComponent {
+
+  constructor(private dialog: MatDialog) {}
+
+  openDialog() {
+
+      const dialogConfig = new MatDialogConfig();
+
+      dialogConfig.disableClose = true;
+      dialogConfig.autoFocus = true;
+
+      this.dialog.open(SmogDialog, dialogConfig);
+  }
+}
+
+@Component({
+  selector: 'smog-dialog',
+  templateUrl: 'smog-dialog.html',
+})
+export class SmogDialog {}
