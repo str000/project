@@ -279,10 +279,30 @@
 }
 /* --- PORADY ---*/
 
-.is-green {
+.green-api {
   background-color: green;
 }
 
-.is-red {
+.medium-api{
+  background-color: yellow;
+}
+
+.more-medium-api {
+  background-color: orange;
+}
+
+.hard-api {
   background-color: red;
+}
+
+.hard-hard-api {
+  background-color: rebeccapurple;
+}
+
+.dead-api {
+  background-color: purple;
+}
+
+.error {
+  background-color: white;
 }
