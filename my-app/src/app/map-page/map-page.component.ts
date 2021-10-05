@@ -53,12 +53,14 @@ export class MapPageComponent implements OnInit {
 
     
     //Accelerometer aby sprawdzać czym sie porusza
-  
-    window.addEventListener("deviceorientation", (e) => {
-      this.alpha = Math.abs(e.alpha! - 360);
-      this.mapa.rotateTo(this.alpha, {duration: 1})
-    }, true);
-
+    if(window.DeviceOrientationEvent){
+      window.addEventListener("deviceorientation", (e) => {
+        this.alpha = Math.abs(e.alpha! - 360);
+        this.mapa.rotateTo(this.alpha, {duration: 1})
+      }, true);
+    }else{
+      console.log("DeviceOrientationEvent is not supported");
+    }
 
     if(window.DeviceMotionEvent){
       window.addEventListener("devicemotion", (event) => {
