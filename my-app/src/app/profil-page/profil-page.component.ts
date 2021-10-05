@@ -70,7 +70,7 @@ export class ProfilPageComponent implements OnInit {
 
 export class AppComponent {
 
-  constructor(private dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {}
 
   openDialog() {
 
@@ -80,6 +80,11 @@ export class AppComponent {
       dialogConfig.autoFocus = true;
 
       this.dialog.open(SmogDialog, dialogConfig);
+
+      dialogConfig.position = {
+        top: '0',
+        left: '0'
+      };
   }
 }
 
