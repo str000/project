@@ -13,9 +13,8 @@ import { WorldPageComponent } from './world-page/world-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
 import { CommonModule } from '@angular/common';
-
 import { HttpClientModule } from '@angular/common/http';
-import { SmogPageComponent } from './smog-page/smog-page.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { SmogPageComponent } from './smog-page/smog-page.component';
     WorldPageComponent,
     MapPageComponent,
     SettingsPageComponent,
-    SmogPageComponent
   ],
   imports: [
     BrowserModule,
