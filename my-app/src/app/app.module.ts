@@ -17,6 +17,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SmogPageComponent } from './smog-page/smog-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
+import { environment } from 'src/environments/environment';
+
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -52,8 +55,10 @@ import { MapPageComponent } from './map-page/map-page.component';
       "showBackground": false,
       "clockwise": false,
       "startFromZero": false,
-      "lazy": true})
-  //...
+      "lazy": true
+    }),
+    AngularFireModule.initializeApp(environment.firebase)
+
   ],
   providers: [],
   bootstrap: [AppComponent]

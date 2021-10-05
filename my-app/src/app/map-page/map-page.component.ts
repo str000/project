@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import * as Mapboxgl from 'mapbox-gl';
 import { environment } from 'src/environments/environment';
-
 @Component({
   selector: 'app-map-page',
   templateUrl: './map-page.component.html',
   styleUrls: ['./map-page.component.css']
 })
 export class MapPageComponent implements OnInit {
+
+
 
   mapa: Mapboxgl.Map;
   lat: any;
@@ -49,6 +50,7 @@ export class MapPageComponent implements OnInit {
       //nie zezwolono na lokalizowanie
     }
 
+    
     
     //Accelerometer aby sprawdzać czym sie porusza
     /*if(window.DeviceOrientationEvent){
