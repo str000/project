@@ -1,1 +1,101 @@
-<p>profil-page works!</p>
+<!-- --- POSTĘP --- -->
+<div class="upper-section-container">
+
+  <!-- Przywitanie -->
+  <div class="hello-words">Witaj, Adamie!</div>
+
+  <div class="progress-bar-container">
+
+    <!-- Awatar -->
+    <div class="circular-landscape"><img src="../../assets/tomi-vadasz-SBKJ47obEHY-unsplash.jpg" alt="avatar" class="avatar"></div>
+
+    <!-- Pasek Postępu -->
+    <circle-progress
+    [percent]="85"
+    [radius]="68"
+    [outerStrokeWidth]="10"
+    [innerStrokeWidth]="8"
+    [outerStrokeColor]="'#008005'"
+    [innerStrokeColor]="'#C4C4C4'"
+    [animation]="false"
+    [animationDuration]="0"
+    ></circle-progress>
+
+  </div>
+</div>
+<!-- --- POSTĘP --- -->
+
+<!-- --- PORADY --- -->
+<div class="mid-section-container">
+  <div class="advice-header">
+    <div class="advice-icon"><mat-icon class="icons-m">date_range</mat-icon></div>
+  </div>
+  <div class="advice-title">
+    <div class="adive-title-text">Porada na dziś</div>
+  </div>
+  <div class="advice-content">
+    <div class="advice-content-text">
+      Odnoszenie wytłoczek po jajkach z powrotem do sklepu było by naprawde dobrym pomysłem.
+    </div>
+  </div>
+</div>
+<!-- --- PORADY --- -->
+
+<div class="lower-section-container">
+
+<!-- --- SMOG --- -->
+<div class="left-lower-section-container" [ngClass]="setColor">
+  <a routerLink="/smog" class="icons">
+  <div class="smog-header">
+    <div class="smog-icon"><mat-icon class="icons-m">cloud</mat-icon></div>
+    <div class="smog-title">Poziom Smogu</div>
+  </div>
+  <div class="smog-content" >
+    <div class="smog-content-value">
+      <span class="smog-content-value-o3" *ngFor="let air of cityValue">
+        {{this.dominentValue}}
+      </span>
+      <span class="sub" *ngFor="let airIndex of cityValue">
+        {{airIndex.data.dominentpol}}
+      </span>
+
+    </div>
+    <div class="smog-content-text-value" *ngFor="let action of cityValue">
+      <span>{{this.setNameQuality}}</span>
+    </div>
+  </div>
+  <div class="smog-footer">
+    <div class="smog-location">
+      {{this.nameCity}}
+    </div>
+    <div class="smog-time">
+      {{this.localTime}}
+    </div>
+  </div>
+</a>
+</div>
+<!-- --- SMOG --- -->
+
+<!-- --- KALENDARZ --- -->
+<div class="right-lower-section-container">
+  <div class="calendar-header">
+    <div class="calendar-icon"><mat-icon class="icons-m">date_range</mat-icon></div>
+    <div class="calendar-title">Tydzień</div>
+  </div>
+  <div class="calendar-day-row-top">
+    <div class="calendar-day-element" class="calendar-day-monday">Pn</div>
+    <div class="calendar-day-element" class="calendar-day-wednesday">Śr</div>
+    <div class="calendar-day-element" class="calendar-day-friday">Pt</div>
+  </div>
+  <div class="calendar-day-row-bottom">
+    <div class="calendar-day-element" class="calendar-day-tuesday">Wt</div>
+    <div class="calendar-day-element" class="calendar-day-thursday">Czw</div>
+  </div>
+  <div class="calendar-footer">
+    <div class="calendar-day-big-element" class="calendar-day-saturday">Sb</div>
+    <div class="calendar-day-big-element" class="calendar-day-sunday">Nd</div>
+  </div>
+</div>
+<!-- --- KALENDARZ --- -->
+
+</div>
