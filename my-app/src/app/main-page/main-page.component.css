@@ -8,20 +8,13 @@
 }
 
 .logo {
-    position: absolute;
-    left: 15px;
     font-size: 16px;
     font-family: Nunito;
     font-weight: 800;
     color: rgba(0, 0, 0, .35);
     margin: 2px;
     line-height: 22px;
-}
-
-.profle-icon {
-    position: absolute;
-    left: calc(100% - 40px);
-    color: rgba(0, 0, 0, .35);
+    text-align: center;
 }
 
 .page-container {

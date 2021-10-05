@@ -19,12 +19,10 @@ export class MapPageComponent implements OnInit {
   acly: any;
   aclz: any;
 
-  aclxmax: any;
-  aclymax: any;
-  aclzmax: any;
-
   speedV: any;
   alpha: any;
+
+  liveActivity: any;
 
   ngOnInit() {
 
@@ -72,17 +70,6 @@ export class MapPageComponent implements OnInit {
       console.log("DeviceMotionEvent is not supported");
     }
 
-    /*if(this.aclx & this.acly & this.aclz) {
-      if(this.aclx > this.aclxmax) {
-        this.aclxmax = this.aclx;
-      }
-      if(this.acly > this.aclymax) {
-        this.aclymax = this.acly;
-      }
-      if(this.aclz > this.aclzmax) {
-        this.aclzmax = this.aclz;
-      }
-    }*/
    
   }
 
@@ -107,9 +94,22 @@ export class MapPageComponent implements OnInit {
       }
       
       if (speed === null || speed === 0) {
-        this.speedV = "0 Km/h";
+        this.speedV = 0;
       } else {
-        this.speedV = (speed * 3.6).toFixed(0) + "Km/h";
+        this.speedV = (speed * 3.6).toFixed(0);
+      }
+
+      if (this.speedV > 0) {
+        this.liveActivity = "directions_walk"
+      }
+      else if (this.speedV > 7) {
+        this.liveActivity = "directions_run"
+      } 
+      else if (this.speedV > 30) {
+        this.liveActivity = "drive_eta"
+      } 
+      else {
+        this.liveActivity = "accessibility"
       }
   }
 

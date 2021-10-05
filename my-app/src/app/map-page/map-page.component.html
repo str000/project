@@ -5,6 +5,18 @@
 </div>
 <div id="mapa-mapbox"></div>
 <div class="details-points" cdkDragLockAxis="y" cdkDrag>
+    <div class="speed">
+        <p class="speed-v">{{this.speedV}}<br><span class="speed-u">km/h</span></p>
+    </div>
+    <div class="map-control">
+        <div class="live-activity">
+            <div class="live"></div>
+            <mat-icon class="activity">{{this.liveActivity}}</mat-icon>
+        </div>
+        <div class="center-position">
+            <mat-icon class="gps-fixed">gps_fixed</mat-icon>
+        </div>
+    </div>
     <div class="details-head" cdkDragHandle>
         <p class="details-head-ng">Dzisiaj</p>
         <mat-icon class="menu-drg">menu</mat-icon>
@@ -14,9 +26,5 @@
     <p>X: {{this.aclx}}</p>
     <p>Y: {{this.acly}}</p>
     <p>Z: {{this.aclz}}</p>
-    <!--<p>X max: {{this.aclxmax}}</p>
-    <p>Y max: {{this.aclymax}}</p>
-    <p>Z max: {{this.aclzmax}}</p>-->
-    <p>Prędkość: {{this.speedV}}</p>
     <p>Alfa: {{this.alpha}}</p>
 </div>
