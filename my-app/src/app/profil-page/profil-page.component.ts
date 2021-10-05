@@ -1,7 +1,6 @@
 import { formatDate } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../api.service';
-
 @Component({
   selector: 'app-profil-page',
   templateUrl: './profil-page.component.html',
@@ -26,7 +25,7 @@ export class ProfilPageComponent implements OnInit {
     this.apiService.getCity().subscribe((data)=>{
       this.cityValue.push(data);
       console.log(this.cityValue[0].data);
-
+      
 
       this.dominent = this.cityValue[0].data.dominentpol;
 
@@ -68,6 +67,13 @@ export class ProfilPageComponent implements OnInit {
       else this.setColor = "error"
 
     });
+
+
+
+
+
+
+
   }
 
 }
