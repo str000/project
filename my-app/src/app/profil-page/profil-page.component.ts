@@ -1,7 +1,7 @@
 import { formatDate } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../api.service';
-import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import { SmogDialog } from './smog-dialog';
 
 @Component({
   selector: 'app-profil-page',
@@ -23,7 +23,6 @@ export class ProfilPageComponent implements OnInit {
     this.apiService.getCity().subscribe((data)=>{
       this.cityValue.push(data);
       console.log(this.cityValue[0].data);
-      
 
       this.dominent = this.cityValue[0].data.dominentpol;
 
@@ -67,29 +66,3 @@ export class ProfilPageComponent implements OnInit {
     });
   }
 }
-
-export class AppComponent {
-
-  constructor(public dialog: MatDialog) {}
-
-  openDialog() {
-
-      const dialogConfig = new MatDialogConfig();
-
-      dialogConfig.disableClose = true;
-      dialogConfig.autoFocus = true;
-
-      this.dialog.open(SmogDialog, dialogConfig);
-
-      dialogConfig.position = {
-        top: '0',
-        left: '0'
-      };
-  }
-}
-
-@Component({
-  selector: 'smog-dialog',
-  templateUrl: 'smog-dialog.html',
-})
-export class SmogDialog {}

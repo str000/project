@@ -12,7 +12,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { WorldPageComponent } from './world-page/world-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
-import { SmogDialog } from './profil-page/profil-page.component';
+import { SmogDialog } from './profil-page/smog-dialog';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
