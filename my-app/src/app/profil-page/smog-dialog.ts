@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 
-export class ProfilPageComponent {
+export class SmogComponent {
 
   constructor(public dialog: MatDialog) {}
 
