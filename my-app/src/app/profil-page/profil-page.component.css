@@ -304,33 +304,21 @@ a {text-decoration: none;color: black}
 /* --- BLUE SQUARE ENDS HERE ---*/
 
 /* --- API COLORS STARTS HERE ---*/
-.green-api {
-  background-color: green;
-}
+.green-api {background-color: green}
+.medium-api {background-color: yellow}
+.more-medium-api {background-color: orange}
+.hard-api {background-color: red}
+.hard-hard-api {background-color: rebeccapurple}
+.dead-api {background-color: purple}
+.error {background-color: white}
 
-.medium-api {
-  background-color: yellow;
-}
-
-.more-medium-api {
-  background-color: orange;
-}
-
-.hard-api {
-  background-color: red;
-}
-
-.hard-hard-api {
-  background-color: rebeccapurple;
-}
-
-.dead-api {
-  background-color: purple;
-}
-
-.error {
-  background-color: white;
-}
+.green-api-color {color: green}
+.medium-api-color {color: yellow}
+.more-medium-api-color {color: orange}
+.hard-api-color {color: red}
+.hard-hard-api-color {color: rebeccapurple}
+.dead-api-color {color: purple}
+.error-color {color: white}
 /* --- API COLORS ENDS HERE ---*/
 
 /* --- DIALOG SECTION STARTS HERE ---*/
@@ -339,5 +327,11 @@ a {text-decoration: none;color: black}
   border-radius: 5px;
   margin-top: 24px;
   padding: 5px;
+  font-weight: bold;
 }
+
+td{
+  width: 100%;
+}
+
 /* --- DIALOG SECTION ENDS HERE ---*/

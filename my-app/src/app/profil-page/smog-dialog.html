@@ -38,19 +38,27 @@
     <table>
       <tr>
         <th>Zanieczyszczenie</th>
-        <th>Ilość</th>
+        <th>Ilość (AQI)</th>
       </tr>
       <tr>
-        <td>a</td>
-        <td>10</td>
+        <td>PM10</td>
+        <td [ngClass]="setColorPm10">{{this.pm10}}</td>
       </tr>
       <tr>
-        <td>b</td>
-        <td>10</td>
+        <td>O3</td>
+        <td [ngClass]="setColorO3">{{this.o3}}</td>
       </tr>
       <tr>
-        <td>c</td>
-        <td>10</td>
+        <td>NO2</td>
+        <td [ngClass]="setColorNo2">{{this.no2}}</td>
+      </tr>
+      <tr>
+        <td>SO2</td>
+        <td [ngClass]="setColorSo2">{{this.so2}}</td>
+      </tr>
+      <tr>
+        <td>CO</td>
+        <td [ngClass]="setColorCo">{{this.co}}</td>
       </tr>
     </table>
 
