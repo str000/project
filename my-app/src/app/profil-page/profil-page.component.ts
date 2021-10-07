@@ -79,6 +79,7 @@ export class SmogDialog {
   pm10: any; o3: any; no2: any; so2: any; co: any;
   setColorPm10: any; setColorO3: any; setColorNo2: any;
   setColorSo2: any; setColorCo: any;
+  sourceUrl: any; sourceName: any;
 
   constructor(private apiService: ApiService, public dialog: MatDialog) { }
 
@@ -92,6 +93,9 @@ export class SmogDialog {
       this.no2 = this.cityValue[0].data.iaqi.no2.v;
       this.so2 = this.cityValue[0].data.iaqi.so2.v;
       this.co = this.cityValue[0].data.iaqi.co.v;
+
+      this.sourceUrl = this.cityValue[0].data.attributions[1].url;
+      this.sourceName = this.cityValue[0].data.attributions[1].name;
 
       this.dominent = this.cityValue[0].data.dominentpol;
 

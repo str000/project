@@ -56,12 +56,13 @@
         <td>SO2</td>
         <td [ngClass]="setColorSo2">{{this.so2}}</td>
       </tr>
-      <tr>
-        <td>CO</td>
-        <td [ngClass]="setColorCo">{{this.co}}</td>
+      <tr >
+        <td style="border:none">CO</td>
+        <td style="border:none" [ngClass]="setColorCo">{{this.co}}</td>
       </tr>
     </table>
-
+    <p class="source-name">Źródło: {{this.sourceName}}</p>
+    <p class="source-url"><a href="{{sourceUrl}}"> Więcej informacji</a></p>
   </div>
 </mat-dialog-content>
 

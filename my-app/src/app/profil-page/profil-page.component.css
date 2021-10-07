@@ -1,5 +1,4 @@
-/* links format */
-a {text-decoration: none;color: black}
+
 /* --- MAIN SQUARE STARTS HERE --- */
 
 /* main container */
@@ -323,7 +322,7 @@ a {text-decoration: none;color: black}
 
 /* --- DIALOG SECTION STARTS HERE ---*/
 .smog-mid-content {
-  background-color: burlywood;
+  background-color: #C4C4C4;
   border-radius: 5px;
   margin-top: 24px;
   padding: 5px;
@@ -332,6 +331,18 @@ a {text-decoration: none;color: black}
 
 td{
   width: 100%;
+  border-bottom: 2px solid black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+table {border-collapse: collapse;}
+
+.source-name,.source-url {font-size: 12px;padding:5px}
+
+a {
+  font-weight: bold;
+  color: green;
 }
 
 /* --- DIALOG SECTION ENDS HERE ---*/
