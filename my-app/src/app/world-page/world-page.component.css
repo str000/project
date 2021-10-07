@@ -1,0 +1,102 @@
+.your-profile-container {
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+    position: fixed;
+    width: calc(100% - 60px);
+    top: 20px;
+    z-index: 2;
+}
+
+.your-profile-img{flex:1}
+.your-profile-right-side{flex:2}
+.your-profile-points,.your-profile-place-in-ranking,.friends-control-panel-title {text-align: center;font-weight: bold;}
+
+.circular-landscape {
+    width: 70px; height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+  
+.circular-landscape img {
+    width: auto;
+    height: 100%;
+    margin-left: -20px; /* Ustawienie */
+}
+
+.friends-profile-container {
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    z-index: 0;
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+}
+
+.friends-profile-right-side {
+    text-align: center;
+    font-weight: bold;
+}
+
+.fancy-div {
+    position: absolute;
+    width: calc(100%);
+    top: 110px;
+}
+
+.friends-control-panel-title {
+    font-size: 18px;
+}
+
+.friends-control-panel{
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.friends-control-panel-functions {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+}
+
+.fancy-blur-div {
+    width: 100%;
+    z-index: 1;
+    height: 140px;
+    position: fixed;
+    top:0;
+    left:0;
+    backdrop-filter: blur(1px);
+}
+
+button,select{
+    border-radius: 100px;
+    padding: 5px;
+    border: 2px solid #008005;
+    height: 30px;
+}
+
+.friends-control-panel-add-new,.friends-control-panel-sort{
+    width: 50%;
+    text-align: center;
+}
