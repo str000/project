@@ -1,5 +1,5 @@
 import { formatDate } from '@angular/common';
-import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 
@@ -19,11 +19,7 @@ export class ProfilPageComponent implements OnInit {
   constructor(private apiService: ApiService, public dialog: MatDialog) { }
 
   openDialog() {
-    this.dialog.open(SmogDialog);
-    
-    let dialogRef = this.dialog.open(SmogDialog, {
-      height: '400px',
-      width: '600px',});}
+    this.dialog.open(SmogDialog);}
 
   ngOnInit() {
       this.apiService.getCity().subscribe((data)=>{

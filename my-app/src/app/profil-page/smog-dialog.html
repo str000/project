@@ -5,20 +5,24 @@
       <div class="smog-icon"><mat-icon class="icons-m">cloud</mat-icon></div>
       <div class="smog-title">Poziom Smogu</div>
     </div>
+
     <div class="smog-content" >
+
       <div class="smog-content-value">
         <span class="smog-content-value-o3" *ngFor="let air of cityValue">
           {{this.dominentValue}}
         </span>
+
         <span class="sub" *ngFor="let airIndex of cityValue">
           {{airIndex.data.dominentpol}}
         </span>
-  
       </div>
+
       <div class="smog-content-text-value" *ngFor="let action of cityValue">
         <span>{{this.setNameQuality}}</span>
       </div>
     </div>
+
     <div class="smog-footer">
       <div class="smog-location">
         {{this.nameCity}}
@@ -27,7 +31,29 @@
         {{this.localTime}}
       </div>
     </div>
-  
+  </div>
+
+  <div class="smog-mid-content">
+        
+    <table>
+      <tr>
+        <th>Zanieczyszczenie</th>
+        <th>Ilość</th>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>b</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>c</td>
+        <td>10</td>
+      </tr>
+    </table>
+
   </div>
 </mat-dialog-content>
 

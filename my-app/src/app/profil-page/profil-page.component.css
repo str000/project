@@ -332,3 +332,12 @@ a {text-decoration: none;color: black}
   background-color: white;
 }
 /* --- API COLORS ENDS HERE ---*/
+
+/* --- DIALOG SECTION STARTS HERE ---*/
+.smog-mid-content {
+  background-color: burlywood;
+  border-radius: 5px;
+  margin-top: 24px;
+  padding: 5px;
+}
+/* --- DIALOG SECTION ENDS HERE ---*/
