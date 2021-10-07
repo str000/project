@@ -3,6 +3,8 @@ import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@an
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 
+//------------------------------------------------------------------------------------------------
+
 @Component({
   selector: 'app-profil-page',
   templateUrl: './profil-page.component.html',
@@ -10,14 +12,9 @@ import { ApiService } from '../api.service';
 })
 export class ProfilPageComponent implements OnInit {
 
-  cityValue: any = [ ];
-  cityValueDialog: any = [ ];
-  setColor: any;
-  setNameQuality: any;
-  dominent: any;
-  dominentValue: any;
-  nameCity: any;
-  localTime: any;
+  cityValue: any = [ ]; cityValueDialog: any = [ ]; setColor: any;
+  setNameQuality: any; dominent: any; dominentValue: any;
+  nameCity: any; localTime: any;
 
   constructor(private apiService: ApiService, public dialog: MatDialog) { }
 
@@ -26,9 +23,7 @@ export class ProfilPageComponent implements OnInit {
     
     let dialogRef = this.dialog.open(SmogDialog, {
       height: '400px',
-      width: '600px',
-    });
-  }
+      width: '600px',});}
 
   ngOnInit() {
       this.apiService.getCity().subscribe((data)=>{
@@ -72,12 +67,9 @@ export class ProfilPageComponent implements OnInit {
         this.setColor = "dead-api"
         this.setNameQuality = "Zagrożenie dla życia";
       }
-      else this.setColor = "error"
+      else this.setColor = "error"});}}
 
-    });
-  }
-}
-
+//------------------------------------------------------------------------------------------------
 
 @Component({
   selector: 'smog-dialog',
@@ -85,15 +77,9 @@ export class ProfilPageComponent implements OnInit {
   styleUrls: ['./profil-page.component.css']
 })
 export class SmogDialog {
-  cityValue: any = [ ];
-  cityValueDialog: any = [ ];
-  encapsulation: ViewEncapsulation.None;
-  setColor: any;
-  setNameQuality: any;
-  dominent: any;
-  dominentValue: any;
-  nameCity: any;
-  localTime: any;
+  cityValue: any = [ ]; cityValueDialog: any = [ ]; encapsulation: ViewEncapsulation.None;
+  setColor: any; setNameQuality: any; dominent: any;
+  dominentValue: any; nameCity: any; localTime: any;
 
   constructor(private apiService: ApiService, public dialog: MatDialog) { }
 
@@ -139,8 +125,4 @@ export class SmogDialog {
         this.setColor = "dead-api"
         this.setNameQuality = "Zagrożenie dla życia";
       }
-      else this.setColor = "error"
-
-    });
-  }
-}
+      else this.setColor = "error"});}}
