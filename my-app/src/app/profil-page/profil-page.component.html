@@ -41,10 +41,10 @@
 </div>
 <!-- --- PORADY --- -->
 
-<div class="lower-section-container" mat-button (click)="openDialog()">
+<div class="lower-section-container" mat-button >
 
 <!-- --- SMOG --- -->
-<div class="left-lower-section-container" [ngClass]="setColor">
+<div class="left-lower-section-container" [ngClass]="setColor" (click)="openDialog()">
   
   <div class="smog-header">
     <div class="smog-icon"><mat-icon class="icons-m">cloud</mat-icon></div>

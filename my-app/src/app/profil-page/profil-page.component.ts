@@ -1,7 +1,7 @@
 import { formatDate } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
-import { SmogDialog } from './smog-dialog';
 
 @Component({
   selector: 'app-profil-page',
@@ -18,7 +18,12 @@ export class ProfilPageComponent implements OnInit {
   nameCity: any;
   localTime: any;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, public dialog: MatDialog) { }
+
+  openDialog() {
+    this.dialog.open(SmogDialog);
+  }
+
   ngOnInit() {
     this.apiService.getCity().subscribe((data)=>{
       this.cityValue.push(data);
@@ -65,4 +70,13 @@ export class ProfilPageComponent implements OnInit {
 
     });
   }
+}
+
+
+@Component({
+  selector: 'smog-dialog',
+  templateUrl: 'smog-dialog.html',
+})
+export class SmogDialog {
+
 }

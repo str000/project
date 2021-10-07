@@ -7,12 +7,11 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DemoMaterialModule } from './material-module';
-import { ProfilPageComponent } from './profil-page/profil-page.component';
+import { ProfilPageComponent, SmogDialog } from './profil-page/profil-page.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { WorldPageComponent } from './world-page/world-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
-import { SmogDialog } from './profil-page/smog-dialog';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -23,10 +22,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppComponent,
     MainPageComponent,
     ProfilPageComponent,
+    SmogDialog,
     WorldPageComponent,
     MapPageComponent,
     SettingsPageComponent,
-    SmogDialog,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +57,5 @@ import {MatDialogModule} from '@angular/material/dialog';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [SmogDialog],
 })
 export class AppModule { }
