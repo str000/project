@@ -17,6 +17,9 @@
   
     <button type="button" class="button-sign-in" mat-stroked-button color="basic" (click)="authService.signIn(userName.value, userPassword.value)">Zaloguj</button>
 
-    <a routerLink="/sign-up">Nie masz konta? Zarejestruj</a>
+    <div class="fancy-button">
+      <a routerLink="/sign-up">Nie masz konta? Zarejestruj</a>
+    </div>
+    
   </form>
 </div>

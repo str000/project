@@ -1,17 +1,23 @@
+<div class="form-container">
 <form class="sign-in-form" (keyup.enter)="authService.signUp(userName.value, userPassword.value)">
     <h1>Rejestracja</h1>
+
     <mat-form-field appearance="fill">
       <mat-label>Podaj adres email</mat-label>
       <input matInput placeholder="xyz@example.com" [formControl]="email" #userName required>
       <mat-error *ngIf="email.invalid">{{getErrorEmail()}}</mat-error>
     </mat-form-field>
-    <br>
+
     <mat-form-field appearance="fill">
       <mat-label>Podaj hasło</mat-label>
       <input matInput [formControl]="password" #userPassword required>
       <mat-error *ngIf="password.invalid">{{getErrorPassword()}}</mat-error>
     </mat-form-field>
-    <br>
+
     <button type="button" class="button-sign-in" mat-stroked-button color="basic" (click)="authService.signUp(userName.value, userPassword.value)">Zarejestruj</button>
-    <br><a routerLink="/sign-in">Masz konto? Zaloguj</a>
+    
+    <div class="fancy-button">
+    <a routerLink="/sign-in">Masz konto? Zaloguj</a>
+    </div>
 </form>
+</div>
