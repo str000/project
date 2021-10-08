@@ -1,0 +1,18 @@
+.settings-page-container{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+}
+
+button {
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px;
+    width: calc(100% - 40px);
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+}
