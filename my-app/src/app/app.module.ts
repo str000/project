@@ -23,6 +23,7 @@ import { environment } from 'src/environments/environment';
 import * as firebase from 'firebase/app';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 import { AngularFireModule } from '@angular/fire/compat';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 firebase.initializeApp(environment.firebase);
 
@@ -35,7 +36,8 @@ firebase.initializeApp(environment.firebase);
     SettingsPageComponent,
     SmogPageComponent,
     MapPageComponent,
-    SignInPageComponent
+    SignInPageComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
