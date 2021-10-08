@@ -58,3 +58,7 @@
 .selected .icons-m {
     color: #008005;
 }
+
+.page-container {
+    overflow: auto;
+}
