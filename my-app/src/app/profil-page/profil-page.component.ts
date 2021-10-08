@@ -2,6 +2,7 @@ import { formatDate } from '@angular/common';
 import { unescapeIdentifier } from '@angular/compiler';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { setLogLevel } from '@firebase/app';
 import { getAuth, onAuthStateChanged, updateProfile } from 'firebase/auth';
 import { getDatabase, onValue, ref, set } from 'firebase/database';
 import { ApiService } from '../api.service';
@@ -18,6 +19,7 @@ export class ProfilPageComponent implements OnInit {
   cityValue: any = [ ]; cityValueDialog: any = [ ]; setColor: any;
   setNameQuality: any; dominent: any; dominentValue: any;
   nameCity: any; localTime: any; username: any;
+  level: 80;
 
   constructor(private apiService: ApiService, public dialog: MatDialog) { }
 
@@ -30,7 +32,6 @@ export class ProfilPageComponent implements OnInit {
     const db = getDatabase();
 
     console.log(auth);
-    console.log(db);
 
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -44,6 +45,8 @@ export class ProfilPageComponent implements OnInit {
         const username = user.displayName;
         this.username = username;
         console.log(username);
+
+        
       } 
     });
 
