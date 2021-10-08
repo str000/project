@@ -64,7 +64,7 @@ firebase.initializeApp(environment.firebase);
       "showBackground": false,
       "clockwise": false,
       "startFromZero": false,
-      "lazy": true
+      "lazy": false
     }),
     FormsModule,
     ReactiveFormsModule,

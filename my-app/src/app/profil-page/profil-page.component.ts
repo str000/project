@@ -26,6 +26,9 @@ export class ProfilPageComponent implements OnInit {
       this.cityValue.push(data);
       console.log(this.cityValue[0].data);
 
+      let element: HTMLElement = document.getElementsByTagName('circle-progress')[0] as HTMLElement;
+      element.click();
+
       this.dominent = this.cityValue[0].data.dominentpol;
 
       var time = new Date();
