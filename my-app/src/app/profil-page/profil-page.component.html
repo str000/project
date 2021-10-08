@@ -41,11 +41,11 @@
 </div>
 <!-- --- PORADY --- -->
 
-<div class="lower-section-container">
+<div class="lower-section-container" mat-button >
 
 <!-- --- SMOG --- -->
-<div class="left-lower-section-container" [ngClass]="setColor">
-  <a routerLink="/smog" class="icons">
+<div class="left-lower-section-container" [ngClass]="setColor" (click)="openDialog()">
+  
   <div class="smog-header">
     <div class="smog-icon"><mat-icon class="icons-m">cloud</mat-icon></div>
     <div class="smog-title">Poziom Smogu</div>
@@ -72,7 +72,7 @@
       {{this.localTime}}
     </div>
   </div>
-</a>
+
 </div>
 <!-- --- SMOG --- -->
 

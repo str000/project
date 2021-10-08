@@ -1,0 +1,71 @@
+<mat-dialog-content class="mat-typography">
+    <div style="margin-right: 0;" class="left-lower-section-container" [ngClass]="setColor">
+    
+      <div class="smog-header">
+        <div class="smog-icon"><mat-icon class="icons-m">cloud</mat-icon></div>
+        <div class="smog-title">Poziom Smogu</div>
+      </div>
+  
+      <div class="smog-content" >
+  
+        <div class="smog-content-value">
+          <span class="smog-content-value-o3" *ngFor="let air of cityValue">
+            {{this.dominentValue}}
+          </span>
+  
+          <span class="sub" *ngFor="let airIndex of cityValue">
+            {{airIndex.data.dominentpol}}
+          </span>
+        </div>
+  
+        <div class="smog-content-text-value" *ngFor="let action of cityValue">
+          <span>{{this.setNameQuality}}</span>
+        </div>
+      </div>
+  
+      <div class="smog-footer">
+        <div class="smog-location">
+          {{this.nameCity}}
+        </div>
+        <div class="smog-time">
+          {{this.localTime}}
+        </div>
+      </div>
+    </div>
+  
+    <div class="smog-mid-content">
+          
+      <table>
+        <tr>
+          <th>Zanieczyszczenie</th>
+          <th>Ilość (AQI)</th>
+        </tr>
+        <tr>
+          <td>PM10</td>
+          <td [ngClass]="setColorPm10">{{this.pm10}}</td>
+        </tr>
+        <tr>
+          <td>O3</td>
+          <td [ngClass]="setColorO3">{{this.o3}}</td>
+        </tr>
+        <tr>
+          <td>NO2</td>
+          <td [ngClass]="setColorNo2">{{this.no2}}</td>
+        </tr>
+        <tr>
+          <td>SO2</td>
+          <td [ngClass]="setColorSo2">{{this.so2}}</td>
+        </tr>
+        <tr >
+          <td style="border:none">CO</td>
+          <td style="border:none" [ngClass]="setColorCo">{{this.co}}</td>
+        </tr>
+      </table>
+      <p class="source-name">Źródło: {{this.sourceName}}</p>
+      <p class="source-url"><a href="{{sourceUrl}}"> Więcej informacji</a></p>
+    </div>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Zamknij</button>
+  </mat-dialog-actions>

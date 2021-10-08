@@ -1,138 +1,142 @@
-a {
-  text-decoration: none;
-  color: black
-}
 
-/* --- POSTĘP --- */
+/* --- MAIN SQUARE STARTS HERE --- */
 
-/* Główny pojemnik */
+/* main container */
 .upper-section-container {
   border-radius: 5px;
   margin: 20px;
   height: 220px;
+  background-color: white;
+
+  /* flex */
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: center;
-  background-color: white;
+  justify-content: center
 }
 
-/* Powitanie */
+/* hello words */
 .hello-words {
-  left: 50%;
-  transform: translate(-50%,0);
   position: absolute;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, 0);
   bottom: calc(100% - 50px);
+  text-align: center;
+
   font-size: 27px;
   font-weight: bold;
-  width: 100%;
-  color: #008005;
-  text-align: center;
+  color: #008005
 }
 
-/* Pasek postępu */
+/* progress bar */
 .progress-bar-container {
   margin-top: 20px;
   top: 50%;
-  transform: translate(0,10%);
+  transform: translate(0, 10%);
 }
 
-/* --- Zaokrąlenie i ustawienie zdjęcia --- */
+/* img */
 .circular-landscape {
-  width: 120px; height: 120px;
+  width: 120px;
+  height: 120px;
   overflow: hidden;
   position: absolute;
-  left: 50%; top: 49%;
-  transform: translate(-50%,-50%);
-  border-radius: 50%;
-}
-
-.circular-landscape img {
+  left: 50%;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%
+}.circular-landscape img {
   width: auto;
   height: 100%;
-  margin-left: -50px; /* Ustawienie */
+  margin-left: -50px
 }
-/* --- POSTĘP --- */
+/* --- MAIN SQUARE ENDS HERE --- */
 
+/* --- ???? STARTS HERE --- */
 .lower-section-container {
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   margin: 20px;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
 }
 
-.left-lower-section-container, .right-lower-section-container{
+.left-lower-section-container,
+.right-lower-section-container {
   height: 150px;
   border-radius: 5px;
   position: relative;
   flex: 1;
   padding: 5px;
-  overflow:auto;
+  overflow: auto;
 }
 
-.smog-icon, .calendar-icon{
+.smog-icon,
+.calendar-icon {
   border-radius: 50%;
   height: 23px;
   width: 23px;
   padding: 2px;
-  background-color: rgba(0,0,0, .20);;
+  background-color: rgba(0, 0, 0, .20)
 }
 
-.smog-icon .icons-m, .calendar-icon, .icons-m{
-  font-size: 23px;
-}
+.smog-icon .icons-m,
+.calendar-icon,
+.icons-m {font-size: 23px}
 
-.smog-header, .calendar-header {
+.smog-header,
+.calendar-header {
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: stretch;
-  font-weight: bold;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  font-weight: bold
 }
 
-.calendar-title, .smog-title {
-  flex-grow: 2;
-  text-align: center;
-}
+.calendar-title,
+.smog-title {flex-grow: 2;text-align: center}
+/* --- ???? ENDS HERE --- */
 
-/* --- SMOG --- */
+/* --- SMOG SQUARE STARTS HERE --- */
 .left-lower-section-container {
   background-color: #F4DC00;
   margin-right: 10px;
 }
 
-.smog-icon > .icons-m {
+.smog-icon>.icons-m {
   color: #2958FF;
 }
 
 .smog-content {
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+
+  /* flex */
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   align-content: stretch;
-  text-align: center;
-  padding: 5px;
-  font-weight: bold;
 }
 
 .smog-content-value {
   font-size: 40px;
   padding-top: 10px;
 
+  /* flex */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: stretch;
   align-content: stretch;
-
 }
 
 .smog-content-text-value {
@@ -155,39 +159,45 @@ a {
   width: calc(100% - 10px);
   padding-right: 5px;
   padding-bottom: 5px;
+  text-shadow: 1px 1px 2px black;
 
+  /* flex */
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
 }
-/* --- SMOG --- */
+/* --- SMOG SQUARE ENDS HERE --- */
 
-/* --- KALENDARZ --- */
+/* --- CALENDAR SQUARE STARTS HERE   --- */
 .right-lower-section-container {
   background-color: white;
   margin-left: 10px;
 }
 
-.calendar-icon > .icons-m {
-  color:#008005
-}
+.calendar-icon>.icons-m {color: #008005}
 
-.calendar-day-row-bottom,.calendar-footer,.calendar-day-row-top {
+.calendar-day-row-bottom,
+.calendar-footer,
+.calendar-day-row-top {
+  /* flex */
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: stretch;
-	align-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
 
   margin-top: 10px;
 }
 
-.calendar-day-monday, .calendar-day-tuesday, .calendar-day-wednesday,
-.calendar-day-thursday, .calendar-day-friday{
+.calendar-day-monday,
+.calendar-day-tuesday,
+.calendar-day-wednesday,
+.calendar-day-thursday,
+.calendar-day-friday {
   background-color: #C4C4C4;
   height: 25px;
   width: 25px;
@@ -196,28 +206,30 @@ a {
   font-size: 12px;
   font-weight: bold;
 
+  /* flex */
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
 }
 
-.calendar-day-tuesday {margin-left: 18px;}
-.calendar-day-thursday {margin-right: 18px;}
+.calendar-day-tuesday {margin-left: 18px}
+.calendar-day-thursday {margin-right: 18px}
 
 .calendar-footer {
   bottom: 0;
   position: absolute;
   width: calc(100% - 10px);
   border-top: 2px solid #C4C4C4;
-  margin-left:-5px;
+  margin-left: -5px;
   padding: 5px;
 
 }
 
-.calendar-day-saturday, .calendar-day-sunday {
+.calendar-day-saturday,
+.calendar-day-sunday {
   height: 35px;
   width: 35px;
   background-color: #C4C4C4;
@@ -228,46 +240,48 @@ a {
   font-size: 15px;
   font-weight: bold;
 
+  /* flex */
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
 }
-/* --- KALENDARZ --- */
+/* --- CALENDAR SQUARE ENDS HERE   --- */
 
-/* --- PORADY ---*/
+/* --- BLUE SQUARE STARTS HERE ---*/
 .mid-section-container {
   height: 100px;
   border-radius: 5px;
   padding: 5px;
   margin: 20px;
   background-color: #2958FF;
-  overflow:auto;
+  overflow: auto;
 }
 
-.advice-icon > .icons-m{
-  color: white;
-
-}
+.advice-icon>.icons-m {color: white;}
 
 .advice-icon {
   border-radius: 50%;
   height: 30px;
   width: 30px;
   padding: 2px;
-  background-color: rgba(0,0,0, .35);
+  background-color: rgba(0, 0, 0, .35);
 
+  /* flex */
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
 }
 
-.advice-header, .advice-title, .advice-content {
+.advice-header,
+.advice-title,
+.advice-content {
+  /* flex */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -286,32 +300,50 @@ a {
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
 }
-/* --- PORADY ---*/
 
-.green-api {
-  background-color: green;
+/* --- BLUE SQUARE ENDS HERE ---*/
+
+/* --- API COLORS STARTS HERE ---*/
+.green-api {background-color: green}
+.medium-api {background-color: yellow}
+.more-medium-api {background-color: orange}
+.hard-api {background-color: red}
+.hard-hard-api {background-color: rebeccapurple}
+.dead-api {background-color: purple}
+.error {background-color: white}
+
+.green-api-color {color: green}
+.medium-api-color {color: yellow}
+.more-medium-api-color {color: orange}
+.hard-api-color {color: red}
+.hard-hard-api-color {color: rebeccapurple}
+.dead-api-color {color: purple}
+.error-color {color: white}
+/* --- API COLORS ENDS HERE ---*/
+
+/* --- DIALOG SECTION STARTS HERE ---*/
+.smog-mid-content {
+  background-color: #C4C4C4;
+  border-radius: 5px;
+  margin-top: 24px;
+  padding: 5px;
+  font-weight: bold;
 }
 
-.medium-api{
-  background-color: yellow;
+td{
+  width: 100%;
+  border-bottom: 2px solid black;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.more-medium-api {
-  background-color: orange;
+table {border-collapse: collapse;}
+
+.source-name,.source-url {font-size: 12px;padding:5px}
+
+a {
+  font-weight: bold;
+  color: green;
 }
 
-.hard-api {
-  background-color: red;
-}
-
-.hard-hard-api {
-  background-color: rebeccapurple;
-}
-
-.dead-api {
-  background-color: purple;
-}
-
-.error {
-  background-color: white;
-}
+/* --- DIALOG SECTION ENDS HERE ---*/

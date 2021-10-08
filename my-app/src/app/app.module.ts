@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { DemoMaterialModule } from './material-module';
-import { ProfilPageComponent } from './profil-page/profil-page.component';
+import { ProfilPageComponent, SmogDialog } from './profil-page/profil-page.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { WorldPageComponent } from './world-page/world-page.component';
 
@@ -18,6 +18,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MapPageComponent } from './map-page/map-page.component';
 import { environment } from 'src/environments/environment';
+
+import {MatDialogModule} from '@angular/material/dialog';
 
 import * as firebase from 'firebase/app';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
@@ -35,7 +37,8 @@ firebase.initializeApp(environment.firebase);
     SettingsPageComponent,
     MapPageComponent,
     SignInPageComponent,
-    SignUpComponent
+    SignUpComponent,
+    SmogDialog,
   ],
   imports: [
     BrowserModule,
