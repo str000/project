@@ -1,6 +1,9 @@
 import { formatDate } from '@angular/common';
+import { unescapeIdentifier } from '@angular/compiler';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { getAuth, onAuthStateChanged, updateProfile } from 'firebase/auth';
+import { getDatabase, onValue, ref, set } from 'firebase/database';
 import { ApiService } from '../api.service';
 
 //------------------------------------------------------------------------------------------------
@@ -14,7 +17,7 @@ export class ProfilPageComponent implements OnInit {
 
   cityValue: any = [ ]; cityValueDialog: any = [ ]; setColor: any;
   setNameQuality: any; dominent: any; dominentValue: any;
-  nameCity: any; localTime: any;
+  nameCity: any; localTime: any; username: any;
 
   constructor(private apiService: ApiService, public dialog: MatDialog) { }
 
@@ -22,6 +25,29 @@ export class ProfilPageComponent implements OnInit {
     this.dialog.open(SmogDialog);}
 
   ngOnInit() {
+
+    const auth = getAuth();
+    const db = getDatabase();
+
+    console.log(auth);
+    console.log(db);
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        console.log(uid);
+        
+        updateProfile(auth.currentUser, {
+          displayName: "Adam"
+        }).then(() => {}).catch((error) => {});
+
+        const username = user.displayName;
+        this.username = username;
+        console.log(username);
+      } 
+    });
+
+    //==============================================
       this.apiService.getCity().subscribe((data)=>{
       this.cityValue.push(data);
       console.log(this.cityValue[0].data);
