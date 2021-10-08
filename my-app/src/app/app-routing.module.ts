@@ -6,7 +6,6 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ProfilPageComponent } from './profil-page/profil-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
 import { WorldPageComponent } from './world-page/world-page.component';
-import { SmogPageComponent } from './smog-page/smog-page.component';
 import { CommonModule } from '@angular/common';
 import { MapPageComponent } from './map-page/map-page.component';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
@@ -25,7 +24,6 @@ const routes: Routes = [
     {path: 'world', component: WorldPageComponent},
     {path: 'map', component: MapPageComponent},
     {path: 'settings', component: SettingsPageComponent},
-    {path: 'smog', component: SmogPageComponent}
   ]},
   { path: 'sign-up', component: SignUpComponent }
 ];

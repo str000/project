@@ -16,7 +16,6 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
 import { CommonModule } from '@angular/common';
 
 import { HttpClientModule } from '@angular/common/http';
-import { SmogPageComponent } from './smog-page/smog-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
 import { environment } from 'src/environments/environment';
 
@@ -34,7 +33,6 @@ firebase.initializeApp(environment.firebase);
     ProfilPageComponent,
     WorldPageComponent,
     SettingsPageComponent,
-    SmogPageComponent,
     MapPageComponent,
     SignInPageComponent,
     SignUpComponent
