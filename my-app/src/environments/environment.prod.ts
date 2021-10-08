@@ -4,6 +4,7 @@ export const environment = {
   firebase: {
     apiKey: "AIzaSyAGS3_LWITUo1Fyke3q4E7TkKfPmjbPXRE",
     authDomain: "geopanel-cd042.firebaseapp.com",
+    databaseURL: "https://geopanel-cd042-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "geopanel-cd042",
     storageBucket: "geopanel-cd042.appspot.com",
     messagingSenderId: "372338870334",

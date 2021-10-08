@@ -1,0 +1,46 @@
+.sign-in-form {
+    position: absolute;
+    max-width: 400px;
+    width: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, .1);
+
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.button-sign-in {
+    width: 60%;
+    left: 20%;
+    color: #000;
+}
+
+@media(max-width: 600px) {
+    .login-logo {
+        width: 90px;
+        padding: 15px;
+    }
+    
+}
+
+@media(max-height: 500px) {
+    .login-logo {
+        width: 80px;
+        padding: 10px;
+    }
+    
+}

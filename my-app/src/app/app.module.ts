@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { DemoMaterialModule } from './material-module';
 import { ProfilPageComponent } from './profil-page/profil-page.component';
@@ -19,7 +20,11 @@ import { SmogPageComponent } from './smog-page/smog-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
 import { environment } from 'src/environments/environment';
 
+import * as firebase from 'firebase/app';
+import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 import { AngularFireModule } from '@angular/fire/compat';
+
+firebase.initializeApp(environment.firebase);
 
 @NgModule({
   declarations: [
@@ -29,7 +34,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     WorldPageComponent,
     SettingsPageComponent,
     SmogPageComponent,
-    MapPageComponent
+    MapPageComponent,
+    SignInPageComponent
   ],
   imports: [
     BrowserModule,
@@ -57,8 +63,9 @@ import { AngularFireModule } from '@angular/fire/compat';
       "startFromZero": false,
       "lazy": true
     }),
+    FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase)
-
   ],
   providers: [],
   bootstrap: [AppComponent]

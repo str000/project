@@ -24,7 +24,7 @@ export class ProfilPageComponent implements OnInit {
   ngOnInit() {
     this.apiService.getCity().subscribe((data)=>{
       this.cityValue.push(data);
-      console.log(this.cityValue[0].data);
+      //console.log(this.cityValue[0].data);
       
 
       this.dominent = this.cityValue[0].data.dominentpol;

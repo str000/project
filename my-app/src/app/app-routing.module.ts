@@ -9,9 +9,17 @@ import { WorldPageComponent } from './world-page/world-page.component';
 import { SmogPageComponent } from './smog-page/smog-page.component';
 import { CommonModule } from '@angular/common';
 import { MapPageComponent } from './map-page/map-page.component';
+import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
+
+import { AngularFireAuthGuard, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/compat/auth-guard';
+
+const redirectUnauthorizedToHome = () => redirectUnauthorizedTo(['sign-in']);
+const redirectLoggedInToAccount = () => redirectLoggedInTo(['profile']);
 
 const routes: Routes = [
-  {path: '', component: MainPageComponent, children: [
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: 'sign-in', canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectLoggedInToAccount }, component: SignInPageComponent},
+  {path: '', component: MainPageComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToHome }, children: [
     {path: 'profile', component: ProfilPageComponent},
     {path: 'world', component: WorldPageComponent},
     {path: 'map', component: MapPageComponent},

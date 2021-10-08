@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Mapboxgl from 'mapbox-gl';
 import { environment } from 'src/environments/environment';
-import * as firebase from "firebase/app";
-import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { getDatabase, ref, onValue } from "firebase/database";
 
 
 @Component({
@@ -27,11 +26,15 @@ export class MapPageComponent implements OnInit {
 
   liveActivity: any;
 
-  db: AngularFireDatabase;
 
   ngOnInit() {
+    const db = getDatabase();
 
-    
+    const starCountRef = ref(db, 'test');
+    onValue(starCountRef, (snapshot) => {
+      const data = snapshot.val();
+      console.log(data)
+    });
 
 
     if("geolocation" in navigator) {
